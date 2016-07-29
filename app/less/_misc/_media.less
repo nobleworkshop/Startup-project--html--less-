@@ -1,0 +1,28 @@
+// Media mixins
+
+.desktop(@rules) {
+	@media screen and (max-width: 1200px) { @rules(); }
+}
+
+.tablet(@rules) {
+	@media screen and (max-width: 768px) { @rules(); }
+}
+
+.mobile(@rules) {
+	@media screen and (max-width: 480px) { @rules(); }
+}
+
+.mobile-small(@rules) {
+	@media screen and (max-width: 320px) { @rules(); }
+}
+
+
+// Usage 
+
+// .header {
+// 	background-color: blue;
+	
+// 	.mobile-small({
+// 		background-color: green;
+// 	});
+// }

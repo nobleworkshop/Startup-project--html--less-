@@ -1,0 +1,57 @@
+ // MY MIXINS 
+
+.bg-image (
+  @color: #000, 
+  @imgurl: url('../images/bg.jpg'), 
+  @repeat: no-repeat, 
+  @left: left, 
+  @top: top) {
+  background-color: @color;
+  background-image: @imgurl;
+  background-repeat: @repeat;
+  background-position: @left @top;
+}
+
+.textshadow ( @hor-vert-rad-color: 0px 1px 0px blue ) {
+  text-shadow: @hor-vert-rad-color;
+}
+
+.cover() {
+  -webkit-background-size: cover;
+	   -o-background-size: cover;
+		  background-size: cover;
+}
+
+
+// * Clearfix: contain floats
+// *
+// * For modern browsers
+// * 1. The space content is one way to avoid an Opera bug when the
+// *    `contenteditable` attribute is included anywhere else in the document.
+// *    Otherwise it causes space to appear at the top and bottom of elements
+// *    that receive the `clearfix` class.
+// * 2. The use of `table` rather than `block` is only necessary if using
+// *    `:before` to contain the top-margins of child elements.
+
+.clearfix {
+  &:before, 
+  &:after {
+  	content: " "; /* 1 */
+  	display: table; /* 2 */
+  }
+  &:after {
+	clear: both;
+  }
+}
+
+
+// Big old clear class from 960.gs
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}

@@ -1,0 +1,44 @@
+// Mixins for Open-Sans fonts
+
+.open-sans() {
+	font-family: 'Open Sans';
+	font-weight: 400;
+} 
+
+.open-sans(@style) when (@style = light) {
+	font-family: 'Open Sans';
+	font-weight: 100;
+}
+
+.open-sans(@style) when (@style = regular) {
+	font-family: 'Open Sans';
+	font-weight: 400;
+}
+
+.open-sans(@style) when (@style = semibold) {
+	font-family: 'Open Sans';
+	font-weight: 600;
+}
+
+.open-sans(@style) when (@style = bold) {
+	font-family: 'Open Sans';
+	font-weight: 700;
+}
+
+// Usage  example
+
+// h1 {
+// 	.open-sans;
+// }
+
+// h2 {
+// 	.open-sans(regular);
+// }
+
+// h3 {
+// 	.open-sans(semibold);
+// }
+
+// h4 {
+// 	.open-sans(bold);
+// }
